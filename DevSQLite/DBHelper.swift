@@ -31,7 +31,7 @@ class DBHelper {
             return db
         }
         
-    }
+    // }
     
     func createTable() {
         
