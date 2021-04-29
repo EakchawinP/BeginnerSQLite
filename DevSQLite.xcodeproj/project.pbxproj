@@ -16,6 +16,10 @@
 		1A81308C26366FCE00E9DB5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A81308A26366FCE00E9DB5C /* LaunchScreen.storyboard */; };
 		1A81309726366FCF00E9DB5C /* DevSQLiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A81309626366FCF00E9DB5C /* DevSQLiteTests.swift */; };
 		1A8130A226366FCF00E9DB5C /* DevSQLiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8130A126366FCF00E9DB5C /* DevSQLiteUITests.swift */; };
+		1A8130B52636720F00E9DB5C /* ItemCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8130B32636720F00E9DB5C /* ItemCellTableViewCell.swift */; };
+		1A8130B62636720F00E9DB5C /* ItemCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A8130B42636720F00E9DB5C /* ItemCellTableViewCell.xib */; };
+		1A8130BC2636756D00E9DB5C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8130BB2636756D00E9DB5C /* Person.swift */; };
+		1A8130C12636761B00E9DB5C /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8130C02636761B00E9DB5C /* DBHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		1A81309D26366FCF00E9DB5C /* DevSQLiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevSQLiteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A8130A126366FCF00E9DB5C /* DevSQLiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevSQLiteUITests.swift; sourceTree = "<group>"; };
 		1A8130A326366FCF00E9DB5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A8130B32636720F00E9DB5C /* ItemCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCellTableViewCell.swift; sourceTree = "<group>"; };
+		1A8130B42636720F00E9DB5C /* ItemCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCellTableViewCell.xib; sourceTree = "<group>"; };
+		1A8130BB2636756D00E9DB5C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		1A8130C02636761B00E9DB5C /* DBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		1A81307B26366FCD00E9DB5C /* DevSQLite */ = {
 			isa = PBXGroup;
 			children = (
+				1A8130B2263671F300E9DB5C /* Nib */,
 				1A81307C26366FCD00E9DB5C /* AppDelegate.swift */,
 				1A81307E26366FCD00E9DB5C /* SceneDelegate.swift */,
 				1A81308026366FCD00E9DB5C /* ViewController.swift */,
@@ -109,6 +118,8 @@
 				1A81308A26366FCE00E9DB5C /* LaunchScreen.storyboard */,
 				1A81308D26366FCE00E9DB5C /* Info.plist */,
 				1A81308526366FCD00E9DB5C /* DevSQLite.xcdatamodeld */,
+				1A8130BB2636756D00E9DB5C /* Person.swift */,
+				1A8130C02636761B00E9DB5C /* DBHelper.swift */,
 			);
 			path = DevSQLite;
 			sourceTree = "<group>";
@@ -129,6 +140,15 @@
 				1A8130A326366FCF00E9DB5C /* Info.plist */,
 			);
 			path = DevSQLiteUITests;
+			sourceTree = "<group>";
+		};
+		1A8130B2263671F300E9DB5C /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				1A8130B32636720F00E9DB5C /* ItemCellTableViewCell.swift */,
+				1A8130B42636720F00E9DB5C /* ItemCellTableViewCell.xib */,
+			);
+			path = Nib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8130B62636720F00E9DB5C /* ItemCellTableViewCell.xib in Resources */,
 				1A81308C26366FCE00E9DB5C /* LaunchScreen.storyboard in Resources */,
 				1A81308926366FCE00E9DB5C /* Assets.xcassets in Resources */,
 				1A81308426366FCD00E9DB5C /* Main.storyboard in Resources */,
@@ -261,8 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8130BC2636756D00E9DB5C /* Person.swift in Sources */,
 				1A81308126366FCD00E9DB5C /* ViewController.swift in Sources */,
 				1A81307D26366FCD00E9DB5C /* AppDelegate.swift in Sources */,
+				1A8130C12636761B00E9DB5C /* DBHelper.swift in Sources */,
+				1A8130B52636720F00E9DB5C /* ItemCellTableViewCell.swift in Sources */,
 				1A81307F26366FCD00E9DB5C /* SceneDelegate.swift in Sources */,
 				1A81308726366FCD00E9DB5C /* DevSQLite.xcdatamodeld in Sources */,
 			);

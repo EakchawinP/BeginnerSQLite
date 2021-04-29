@@ -1,24 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DevSQLite" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BtZ-b7-efq">
+                                <rect key="frame" x="15" y="59" width="384" height="185"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ชื่อ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jho-Sg-ENh">
+                                        <rect key="frame" x="10" y="8" width="364" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="D8J-yv-yqI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="นามสกุล" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ovJ-Uw-nfv">
+                                        <rect key="frame" x="10" y="51" width="364" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="Ti7-L9-thA"/>
+                                            <constraint firstAttribute="height" constant="35" id="uha-l7-9M4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M2b-XG-neK">
+                                        <rect key="frame" x="10" y="147" width="364" height="30"/>
+                                        <color key="backgroundColor" red="0.94897991420000005" green="0.34486305709999998" blue="0.4826102853" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="aYl-0W-qEY"/>
+                                        </constraints>
+                                        <state key="normal" title="บันทึก">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Pp-B1-ggN"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="อายุ" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RfL-d4-PCt">
+                                        <rect key="frame" x="10" y="94" width="364" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="62g-bc-5hS"/>
+                                            <constraint firstAttribute="height" constant="35" id="EvQ-vK-ynm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="jho-Sg-ENh" secondAttribute="trailing" constant="10" id="15b-J2-XTu"/>
+                                    <constraint firstItem="jho-Sg-ENh" firstAttribute="leading" secondItem="BtZ-b7-efq" secondAttribute="leading" constant="10" id="CUl-xN-1HR"/>
+                                    <constraint firstAttribute="trailing" secondItem="RfL-d4-PCt" secondAttribute="trailing" constant="10" id="NFl-ha-LuP"/>
+                                    <constraint firstItem="ovJ-Uw-nfv" firstAttribute="top" secondItem="jho-Sg-ENh" secondAttribute="bottom" constant="8" symbolic="YES" id="Olk-fi-Cu4"/>
+                                    <constraint firstItem="ovJ-Uw-nfv" firstAttribute="leading" secondItem="BtZ-b7-efq" secondAttribute="leading" constant="10" id="eXT-EL-5E4"/>
+                                    <constraint firstItem="RfL-d4-PCt" firstAttribute="top" secondItem="ovJ-Uw-nfv" secondAttribute="bottom" constant="8" symbolic="YES" id="gve-zz-aI7"/>
+                                    <constraint firstItem="RfL-d4-PCt" firstAttribute="leading" secondItem="BtZ-b7-efq" secondAttribute="leading" constant="10" id="i02-XZ-Pbf"/>
+                                    <constraint firstItem="jho-Sg-ENh" firstAttribute="top" secondItem="BtZ-b7-efq" secondAttribute="top" constant="8" id="jjY-a0-JvH"/>
+                                    <constraint firstAttribute="trailing" secondItem="ovJ-Uw-nfv" secondAttribute="trailing" constant="10" id="oSn-HE-AsK"/>
+                                    <constraint firstAttribute="trailing" secondItem="M2b-XG-neK" secondAttribute="trailing" constant="10" id="phl-dw-lOy"/>
+                                    <constraint firstAttribute="bottom" secondItem="M2b-XG-neK" secondAttribute="bottom" constant="8" id="u84-EI-3ih"/>
+                                    <constraint firstAttribute="height" constant="185" id="xyq-Ya-GwK"/>
+                                    <constraint firstItem="M2b-XG-neK" firstAttribute="leading" secondItem="BtZ-b7-efq" secondAttribute="leading" constant="10" id="yKW-kQ-5tE"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hAA-oe-RO2">
+                                <rect key="frame" x="5" y="259" width="404" height="598"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BtZ-b7-efq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="GTb-3a-OVw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hAA-oe-RO2" secondAttribute="bottom" constant="5" id="JL7-14-E8e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BtZ-b7-efq" secondAttribute="trailing" constant="15" id="MG1-J4-ls0"/>
+                            <constraint firstItem="hAA-oe-RO2" firstAttribute="top" secondItem="BtZ-b7-efq" secondAttribute="bottom" constant="15" id="W6B-yO-e5I"/>
+                            <constraint firstItem="BtZ-b7-efq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="csw-ri-zRz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hAA-oe-RO2" secondAttribute="trailing" constant="5" id="hxV-e7-sx8"/>
+                            <constraint firstItem="hAA-oe-RO2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="nEW-5l-2vg"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bgView" destination="BtZ-b7-efq" id="sOi-KF-iNO"/>
+                        <outlet property="btn_Save" destination="M2b-XG-neK" id="Y91-wV-caF"/>
+                        <outlet property="tableView" destination="hAA-oe-RO2" id="EXH-U7-uzm"/>
+                        <outlet property="tf_Age" destination="RfL-d4-PCt" id="1yO-Zx-S4m"/>
+                        <outlet property="tf_FirstName" destination="jho-Sg-ENh" id="Cry-k1-g9a"/>
+                        <outlet property="tf_LastName" destination="ovJ-Uw-nfv" id="WCl-Pd-DUF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="97" y="94"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
